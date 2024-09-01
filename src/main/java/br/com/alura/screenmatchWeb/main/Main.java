@@ -1,9 +1,6 @@
 package br.com.alura.screenmatchWeb.main;
 
-import br.com.alura.screenmatchWeb.model.DadosEpisodio;
-import br.com.alura.screenmatchWeb.model.DadosSerie;
-import br.com.alura.screenmatchWeb.model.DadosTemporada;
-import br.com.alura.screenmatchWeb.model.Episodio;
+import br.com.alura.screenmatchWeb.model.*;
 import br.com.alura.screenmatchWeb.service.ConsumoApi;
 import br.com.alura.screenmatchWeb.service.ConverteDados;
 
@@ -59,7 +56,6 @@ public class Main {
         private void buscarSerieWeb() {
             DadosSerie dados = getDadosSerie();
             dadosSerie.add(dados);
-            System.out.println(dados);
         }
 
         private DadosSerie getDadosSerie() {
@@ -82,7 +78,15 @@ public class Main {
     }
 
     private void listarSeriesBuscadas() {
-        dadosSerie.forEach(System.out::println);
+        List<Serie> series = new ArrayList<>();
+        series = dadosSerie.stream()
+                        .map(d -> new Serie(d))
+                                .collect(Collectors.toList());
+
+        series.stream()
+                .sorted(Comparator.comparing(Serie::getGenero))
+                .forEach(System.out::println);
+
     }
 }
 
