@@ -14,6 +14,7 @@ public class Serie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(unique = true)
     private String titulo;
     private Integer totalTemporadas;
@@ -23,7 +24,8 @@ public class Serie {
     private String atores;
     private String poster;
     private String sinopse;
-    @Transient
+
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
     private List<Episodio> episodios = new ArrayList<>();
 
     public List<Episodio> getEpisodios() {
