@@ -22,5 +22,5 @@ O **Screenmatch-Web** é um projeto desenvolvido em Java utilizando o Spring Boo
 ## Instalação
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/screenmatch-web.git
+   git clone https://github.com/MathzBrk/screenmatch-web.git
 
