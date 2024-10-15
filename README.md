@@ -21,9 +21,4 @@ O projeto faz uso de funções lambda, do método `stream`, `enum`, e da bibliot
 - **API MyMemory**
 - **Jackson**
 - PostgreSQL
-  
-## Instalação
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/MathzBrk/screenmatch-web.git
 
