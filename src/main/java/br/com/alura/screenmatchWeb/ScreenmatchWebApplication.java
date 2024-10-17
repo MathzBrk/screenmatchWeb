@@ -8,21 +8,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ScreenmatchWebApplication implements CommandLineRunner {
-	@Autowired
-	private SerieRepository repositorio;
+public class ScreenmatchWebApplication  {
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(ScreenmatchWebApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		Main main = new Main(repositorio);
-		main.exibirMenu();
-
-
-
-
-	}
 }
