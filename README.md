@@ -2,7 +2,7 @@
 
 ## Descrição
 O **Screenmatch-Web** é um projeto desenvolvido em Java utilizando o Spring Boot e Maven. O objetivo do projeto é consumir a API do OMDB para obter dados sobre séries, traduzir as sinopses do inglês usando a API MyMemory, e exibir essas informações de forma organizada. O projeto tem integração com o PostgreSQL, e faz com que os dados das séries sejam gravados no banco de dados.
-O projeto faz uso de funções lambda, do método `stream`, `enum`, e da biblioteca Jackson para manipulação de JSON.
+O projeto faz uso de funções lambda, do método `stream`, `enum`, e da biblioteca Jackson para manipulação de JSON. O projeto também funciona como um API REST, distribuindo corretamente as classes dentro de seus respectivos pacotes. Essa API retorna para o front-end informações como as séries mais recentes, as melhores séries avaliadas, e em cada série, retorna todos os episódios da mesma ou por uma temporada específica, além de retornar os 5 melhores episódios de cada série.
 
 ## Funcionalidades
 - Consumo de dados da API do OMDB sobre séries.
